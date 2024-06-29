@@ -36,7 +36,7 @@ marshmallow==3.21.3
 mpmath==1.3.0
 multidict==6.0.5
 mypy-extensions
-networkx==3.3
+networkx
 nltk==3.8.1
 numpy==1.26.4
 ollama==0.2.1
