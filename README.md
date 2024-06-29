@@ -1,5 +1,7 @@
 Commands to run the code-
-&nbsp
 
-pip install -r requirements.txt\n
+
+pip install -r requirements.txt
+
+
 python main.py
