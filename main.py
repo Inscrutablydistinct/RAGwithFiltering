@@ -150,18 +150,23 @@ def ans(llm, context, question):
 llm = model_pipeline()
 
 # query = "I need the summary of abstract and results from the recent paper on DNA bending before 27 August 2020?"
-query = input("Enter your query here. Write 'stop' to terminate running.")
+query = ""
 
 while (query.lower() != "stop"):
     query = input("Enter your query here. Write 'stop' to terminate running.")
+    
     start_time = time.time()
+    
     out = generate_md(Question,query)
     
     filtered_metadata = filter_data(d,out[1])
     
-    print(filtered_metadata[0])
+    # print(filtered_metadata[0])
     
     context = make_context(embeddings, list_of_documents, filtered_metadata[0],out, vectordb)
     
     print(ans(llm,context,out[0]))
+
+    print("Source Document: "+ filtered_metadata[0]['title'])
+    
     print("Time Taken: "+ str(time.time() - start_time))
