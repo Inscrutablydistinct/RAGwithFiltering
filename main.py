@@ -9,6 +9,7 @@ import re
 import json
 import json
 from langchain.embeddings import HuggingFaceInstructEmbeddings
+import time 
 
 with open('metadata.json') as f:
     d = json.load(f)
