@@ -65,7 +65,6 @@ def filter_data(metadata, filter_dict):
         for key, value in filter_dict.items():
             if key in entry:
               total_score += filter_attributes(entry, key, value)
-              print(total_score)
         scored_metadata.append((total_score, entry))
 
     scored_metadata.sort(reverse=True, key=lambda x: x[0])
