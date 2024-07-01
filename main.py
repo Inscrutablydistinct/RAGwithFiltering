@@ -10,6 +10,8 @@ import json
 import json
 from langchain.embeddings import HuggingFaceInstructEmbeddings
 import time 
+import warnings
+warnings.filterwarnings("ignore")
 
 with open('metadata.json') as f:
     d = json.load(f)
