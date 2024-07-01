@@ -148,10 +148,10 @@ def ans(llm, context, question):
 llm = model_pipeline()
 
 # query = "I need the summary of abstract and results from the recent paper on DNA bending before 27 August 2020?"
-query = input("Enter your query here. Write "stop" to terminate running.")
+query = input("Enter your query here. Write 'stop' to terminate running.")
 
 while (query.tolower() != "stop"):
-    query = input("Enter your query here. Write "stop" to terminate running.")
+    query = input("Enter your query here. Write 'stop' to terminate running.")
     start_time = time.time()
     out = generate_md(Question,query)
     
