@@ -159,6 +159,8 @@ while (query.lower() != "stop"):
     
     out = generate_md(Question,query)
     
+    print(out)
+
     filtered_metadata = filter_data(d,out[1])
     
     # print(filtered_metadata[0])
